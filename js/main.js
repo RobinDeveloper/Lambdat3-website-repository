@@ -24,11 +24,8 @@ homeButton.addEventListener('click', () => {
     }
 })
 
-// robin kan jij hier naar kijken zodat als mensen de template.json file kopieren
-// dat die file dan uit word gelezen en de juiste info wordt verwerkt?
-// is net te ingewikkeld voor mij, bedanki!
-// import data from '../assets/template.json' assert { type: 'JSON' };
-// console.log(data);
+import data from '../public/content.json' assert { type: 'JSON' };
+console.log(data);
 // ------------------------------------------------------------------------------
 
 const assets = [

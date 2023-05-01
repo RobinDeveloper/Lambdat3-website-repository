@@ -1,0 +1,20 @@
+[
+    {
+        "title": "[your title]",
+        "description": "[your description here]",
+        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+    },
+    {
+        "title": "traceroute",
+        "description": "[your description here]",
+        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+    },
+    {
+        "title": "[your title]",
+        "description": "[your description here]",
+        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+    }
+]
