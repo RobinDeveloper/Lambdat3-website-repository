@@ -43,6 +43,7 @@ const assets = [
         image: '',
         titleImage: '',
         color: '#00ff00',
+        //"backgroundImage": "../assets/[name of your group's folder]/background.jpg"
     },
     {
         title: 'traceroute',
@@ -66,11 +67,11 @@ const assets = [
 
 let sections =[];
 
-assets.forEach(asset => {
+content.forEach(object => {
     let section = create('section', 'content');
-    section.classList.add(asset.title);
-    section.setAttribute('id', asset.title);
-    section.style.background = asset.color;
+    section.classList.add(object.title);
+    section.setAttribute('id', object.title);
+    section.style.background = object.backgroundImage;
 
     let title;
 
@@ -85,13 +86,13 @@ assets.forEach(asset => {
     let workDescription = create('div', 'work-description');
 
     let p = create('p');
-    p.innerText = asset.description;
+    p.innerText = object.description;
 
     add(p, workDescription);
 
-    if (asset.titleImage === '') {
+    if (object.titleImage === '') {
         title = create('h1', 'title');
-        let titleText = asset.title.replaceAll("-", " ");
+        let titleText = object.title.replaceAll("-", " ");
         title.innerText = titleText;
     } else {
         title = create('img', 'title');

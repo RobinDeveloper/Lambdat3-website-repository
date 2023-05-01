@@ -3,18 +3,18 @@
         "title": "[your title]",
         "description": "[your description here]",
         "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+        "backgroundImage": "#00ff00"
     },
     {
         "title": "traceroute",
         "description": "[your description here]",
         "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+        "backgroundImage": "#ffff00"
     },
     {
         "title": "[your title]",
         "description": "[your description here]",
         "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "../assets/[name of your group's folder]/background.jpg"
+        "backgroundImage": "#00ffff"
     }
 ]
