@@ -108,7 +108,7 @@ content.forEach(object => {
 
     add(section, main);
 
-    sections.push({id: asset.title});
+    sections.push({id: object.title});
 });
 
 const playButtons = document.querySelectorAll('.audio-player');
