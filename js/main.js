@@ -31,7 +31,7 @@ homeButton.addEventListener('click', () => {
 // console.log(data);
 // ------------------------------------------------------------------------------
 
-assets = [
+const assets = [
     {
         title: 'Trackmania-World-Cup-|-Grand-Final-Commentary',
         description: `The quick, brown fox jumps over a lazy dog.
