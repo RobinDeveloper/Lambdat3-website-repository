@@ -161,7 +161,7 @@ rightNav.addEventListener('click', () => {
 
 function pause() {
     playButtons.forEach(button => {
-        player = button.firstChild;
+        let player = button.firstChild;
         if (player.classList.contains('fa-pause-circle')) {
             player.classList.replace('fa-pause-circle', 'fa-play-circle');
         }
