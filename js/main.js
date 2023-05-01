@@ -28,6 +28,10 @@ import data from '../public/content.json' assert { type: 'json' };
 console.log(data);
 // ------------------------------------------------------------------------------
 
+const content = data;
+
+console.log(content);
+
 const assets = [
     {
         title: 'Trackmania-World-Cup-|-Grand-Final-Commentary',
