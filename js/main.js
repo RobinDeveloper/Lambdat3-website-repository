@@ -24,7 +24,7 @@ homeButton.addEventListener('click', () => {
     }
 })
 
-import data from '../public/content.json' assert { type: 'JSON' };
+import data from '../public/content.json' assert { type: 'json' };
 console.log(data);
 // ------------------------------------------------------------------------------
 
