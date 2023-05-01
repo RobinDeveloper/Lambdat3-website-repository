@@ -90,7 +90,7 @@ content.forEach(object => {
 
     add(p, workDescription);
 
-    if (object.titleImage === '') {
+    if (object.titleImage === '' || object.titleImage !== '[your description here]') {
         title = create('h1', 'title');
         let titleText = object.title.replaceAll("-", " ");
         title.innerText = titleText;
