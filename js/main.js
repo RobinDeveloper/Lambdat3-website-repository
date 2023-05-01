@@ -106,15 +106,15 @@ const rightNav = document.querySelector('.right-nav');
 let i = 1;
 
 let transform = -100;
-main.style.left = `${transform}dvw`;
+main.style.right = `${transform}dvw`;
 
 leftNav.addEventListener('click', () => {
     if (i !== 0) {
         i -=1;
-        transform += 100;
+        transform -= 100;
         pause();
     }
-    main.style.left = `${transform}dvw`;
+    main.style.right = `${transform}dvw`;
     
     // if (i !== 0) i -=1;
     // let section = sections[i].id;
@@ -124,10 +124,10 @@ leftNav.addEventListener('click', () => {
 rightNav.addEventListener('click', () => {
     if (i !== 2) {
         i +=1;
-        transform -= 100;
+        transform += 100;
         pause();
     }
-    main.style.left = `${transform}dvw`;
+    main.style.right = `${transform}dvw`;
 
     // if (i !== 2) i +=1;
     // let section = sections[i].id;
