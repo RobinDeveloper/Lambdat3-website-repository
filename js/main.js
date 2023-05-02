@@ -24,13 +24,10 @@ homeButton.addEventListener('click', () => {
     }
 })
 
-import data from '../public/content.json' assert { type: 'json' };
-console.log(data);
 // ------------------------------------------------------------------------------
 
+import data from '../public/content.json' assert { type: 'json' };
 const content = data;
-
-console.log(content);
 
 const assets = [
     {
@@ -70,7 +67,6 @@ content.forEach(object => {
     } else {
         title = create('img', 'title');
     }
-
 
     add(title, section);
 
@@ -115,10 +111,6 @@ leftNav.addEventListener('click', () => {
         pause();
     }
     main.style.right = `${transform}dvw`;
-    
-    // if (i !== 0) i -=1;
-    // let section = sections[i].id;
-    // window.location = `#${section}`;
 });
 
 rightNav.addEventListener('click', () => {
@@ -128,10 +120,6 @@ rightNav.addEventListener('click', () => {
         pause();
     }
     main.style.right = `${transform}dvw`;
-
-    // if (i !== 2) i +=1;
-    // let section = sections[i].id;
-    // window.location = `#${section}`;
 });
 
 function pause() {
