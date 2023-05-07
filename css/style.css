@@ -20,7 +20,7 @@ main {
     flex-direction: row;
     position: fixed;
     top: 0;
-    transition: .8s left ease;
+    transition: .8s right ease;
 }
 
 button {
