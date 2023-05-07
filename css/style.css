@@ -48,7 +48,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
     transition: .8s top ease;
 }
 
@@ -61,7 +61,7 @@ button:hover {
     position: fixed;
     top: 3rem;
     left: 3rem;
-    z-index: 1;
+    z-index: 3;
 }
 
 .content {
