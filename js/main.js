@@ -4,6 +4,10 @@ const main = document.querySelector('main');
 const heroButton = document.querySelector('.logo-hero');
 const homeButton = document.querySelector('.logo');
 
+const audioTracer = new Audio("../public/testsounds/1.mp3");
+const audioMurder = new Audio("../public/testsounds/2.mp3");
+const audioTrack = new Audio("../public/testsounds/3.mp3");
+
 let activeHero;
 
 heroButton.addEventListener('click', () => {
@@ -82,6 +86,9 @@ content.forEach(object => {
 
 const playButtons = document.querySelectorAll('.audio-player');
 
+for (let j = 0; j < playButtons.length; j++) {
+    playButtons[j].id = j;
+}
 playButtons.forEach(button => {
     let state;
 
@@ -90,8 +97,22 @@ playButtons.forEach(button => {
 
         if (state) {
             button.firstChild.classList.replace('fa-play-circle', 'fa-pause-circle');
+            switch (button.id) {
+                case "0":
+                    audioTrack.play();
+                    break;
+                case "1":
+                    audioTracer.play();
+                    break;
+                case "2":
+                    audioMurder.play();
+                    break
+                default:
+                    console.log("No id for audio");
+            }
         } else {
             button.firstChild.classList.replace('fa-pause-circle', 'fa-play-circle');
+            pause();
         }
     });
 });
@@ -129,6 +150,10 @@ function pause() {
             player.classList.replace('fa-pause-circle', 'fa-play-circle');
         }
     });
+
+    audioTrack.pause();
+    audioTracer.pause();
+    audioMurder.pause();
 }
 
 
