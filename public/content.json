@@ -1,20 +1,21 @@
 [
-    {
-        "title": "Trackmania-World-Cup-|-Grand-Final-Commentary",
-        "description": "[your description here]",
-        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "#00ff00"
-    },
-    {
-        "title": "traceroute",
-        "description": "[your description here]",
-        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "#ffff00"
-    },
-    {
-        "title": "murdercase",
-        "description": "[your description here]",
-        "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-        "backgroundImage": "#00ffff"
-    }
+  {
+    "title": "Trackmania-World-Cup-|-Grand-Final-Commentary",
+    "description": "[your description here]",
+    "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+    "backgroundImage": "#00ff00",
+    "sound": "../assets/[group]/sound.mp3"
+  },
+  {
+    "title": "traceroute",
+    "description": "[your description here]",
+    "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+    "backgroundImage": "#ffff00"
+  },
+  {
+    "title": "murdercase",
+    "description": "[your description here]",
+    "titleImage": "../assets/[name of your group's folder]/title.jpeg",
+    "backgroundImage": "#00ffff"
+  }
 ]

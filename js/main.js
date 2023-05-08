@@ -134,8 +134,15 @@ function pause() {
   });
 }
 
-// please gebruik deze functies voor het aanmaken
-// en plaatsen van DOM elementen op de website. Scheelt moeite ;P
+// ------------------------------------------------------------------------------
+
+import introduction from "../public/introductory.json" assert { type: "json" };
+
+const intro = document.querySelector(".introductory-text");
+intro.innerText = introduction.text;
+
+// ------------------------------------------------------------------------------
+
 function create(el, cl) {
   let element = document.createElement(el);
   if (cl) element.classList.add(cl);
