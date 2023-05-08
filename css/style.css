@@ -26,7 +26,6 @@ main {
 button {
   opacity: 0.5;
   transition: 0.3s opacity ease;
-  filter: invert();
 }
 
 button:hover {
@@ -55,6 +54,7 @@ button:hover {
 
 .logo-hero {
   z-index: 3;
+  filter: invert();
 }
 
 .logo-hero > img {
