@@ -53,6 +53,10 @@ button:hover {
   transition: 0.8s top ease;
 }
 
+.logo-hero {
+  z-index: 3;
+}
+
 .logo-hero > img {
   width: 12rem;
   height: 12rem;
@@ -62,7 +66,23 @@ button:hover {
   position: fixed;
   top: 3rem;
   left: 3rem;
+  z-index: 1;
+}
+
+.introduction {
   z-index: 3;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  padding: 1.5rem;
+  padding-bottom: 7rem;
+  color: #ffffff;
+  transition: 0.3s opacity ease;
+  width: 35dvw;
+}
+
+.introduction:hover {
+  opacity: 1;
 }
 
 .content {
@@ -101,7 +121,8 @@ button:hover {
   font-size: 8rem;
 }
 
-.work-description {
+.work-description,
+.introduction {
   overflow: scroll;
   opacity: 0.1;
   transition: 0.3s opacity ease;
@@ -135,5 +156,5 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 2;
 }

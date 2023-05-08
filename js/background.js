@@ -1,4 +1,3 @@
-let boxes = [];
 let stars = [];
 
 const STARS_COUNT = 20;
@@ -20,6 +19,10 @@ const _10s = _5s * 2;
 
 const GRADIENT_ANIMATION_DURATION = _5s;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
   canvas = createCanvas(innerWidth, innerHeight);
 
@@ -28,22 +31,6 @@ function setup() {
   const [_, maxSize] = STAR_SIZE.map(Math.abs);
   const starsCount = STARS_COUNT || max(windowWidth, windowHeight) / maxSize;
   stars = Array.from({ length: starsCount }).map((_) => createStar());
-
-  // Create four boxes with random positions
-  for (let i = 0; i < 3; i++) {
-    let x = width / 2 + random(20);
-    let y = height / 2 + random(20);
-    let url = "#" + i; // Change this to the desired URL
-    let box = new Box(x, y, url);
-    boxes.push(box);
-  }
-
-  boxes[0].text = "tracer";
-  boxes[0].url = "0dvw";
-  boxes[1].text = "trackmania";
-  boxes[0].url = "100dvw";
-  boxes[2].text = "murders";
-  boxes[0].url = "200dvw";
 }
 
 function draw() {
@@ -63,86 +50,6 @@ function draw() {
     } else {
       stars[stars.indexOf(star)] = createStar();
     }
-  }
-
-  // Update and display each box
-  for (let box of boxes) {
-    box.update();
-    box.display();
-  }
-
-  // Draw curved lines from the middle to each box
-  // let middleX = width / 2;
-  // let middleY = height / 2;
-  // for (let box of boxes) {
-  //     stroke(255, 0, 0); // Red color
-  //     noFill();
-  //     curve(
-  //         middleX, middleY,
-  //         middleX + 20, middleY + 50,
-  //         box.x + box.width / 2 + 50, box.y + box.height / 2 + 30,
-  //         box.x + box.width / 2, box.y + box.height / 2
-  //     );
-  // }
-}
-
-const main = document.querySelector("main");
-
-function mouseClicked() {
-  // Check if any box was clicked
-  for (let box of boxes) {
-    if (box.contains(mouseX, mouseY)) {
-      main.style.right = box.url;
-    }
-  }
-}
-
-class Box {
-  constructor(x, y, url) {
-    this.x = x;
-    this.y = y;
-    this.speedX = random(-2, 2);
-    this.speedY = random(-2, 2);
-    this.text = "undefined";
-    this.width = 100;
-    this.height = 50;
-    this.url = url;
-  }
-
-  update() {
-    // Move the box
-    this.x += this.speedX;
-    this.y += this.speedY;
-
-    // Check boundaries
-    if (this.x < 0 || this.x > width - this.width) {
-      this.speedX *= -1;
-    }
-    if (this.y < 0 || this.y > height - this.height) {
-      this.speedY *= -1;
-    }
-  }
-
-  display() {
-    // Draw the box
-    stroke(0);
-    fill(255);
-    rect(this.x, this.y, this.width, this.height);
-
-    // Draw the text
-    textAlign(CENTER, CENTER);
-    fill(0);
-    text(this.text, this.x + this.width / 2, this.y + this.height / 2);
-  }
-
-  contains(x, y) {
-    // Check if the given coordinates are inside the box
-    return (
-      x > this.x &&
-      x < this.x + this.width / 2 + 100 &&
-      y > this.y &&
-      y < this.y + this.height / 2 + 100
-    );
   }
 }
 
