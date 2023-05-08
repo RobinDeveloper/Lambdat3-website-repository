@@ -79,6 +79,7 @@ button:hover {
   color: #ffffff;
   transition: 0.3s opacity ease;
   width: 35dvw;
+  height: 30dvh;
 }
 
 .introduction:hover {

@@ -87,22 +87,6 @@ content.forEach((object) => {
   sections.push({ id: object.title });
 });
 
-const playButtons = document.querySelectorAll(".audio-player");
-
-playButtons.forEach((button) => {
-  let state;
-
-  button.addEventListener("click", () => {
-    state = !state;
-
-    if (state) {
-      button.firstChild.classList.replace("fa-play-circle", "fa-pause-circle");
-    } else {
-      button.firstChild.classList.replace("fa-pause-circle", "fa-play-circle");
-    }
-  });
-});
-
 const playButtons = document.querySelectorAll('.audio-player');
 
 for (let j = 0; j < playButtons.length; j++) {
