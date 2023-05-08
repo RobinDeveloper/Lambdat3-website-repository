@@ -19,8 +19,13 @@ const _5s = _1s * 5;
 const _10s = _5s * 2;
 
 const GRADIENT_ANIMATION_DURATION = _5s;
+
+
+
 function setup() {
-    createCanvas(innerWidth, innerHeight);
+    canvas = createCanvas(innerWidth, innerHeight);
+
+    canvas.parent("2");
 
     const [_, maxSize] = STAR_SIZE.map(Math.abs);
     const starsCount = STARS_COUNT || max(windowWidth, windowHeight) / maxSize;
@@ -66,18 +71,18 @@ function draw() {
     }
 
     // Draw curved lines from the middle to each box
-    let middleX = width / 2;
-    let middleY = height / 2;
-    for (let box of boxes) {
-        stroke(255, 0, 0); // Red color
-        noFill();
-        curve(
-            middleX, middleY,
-            middleX + 20, middleY + 50,
-            box.x + box.width / 2 + 50, box.y + box.height / 2 + 30,
-            box.x + box.width / 2, box.y + box.height / 2
-        );
-    }
+    // let middleX = width / 2;
+    // let middleY = height / 2;
+    // for (let box of boxes) {
+    //     stroke(255, 0, 0); // Red color
+    //     noFill();
+    //     curve(
+    //         middleX, middleY,
+    //         middleX + 20, middleY + 50,
+    //         box.x + box.width / 2 + 50, box.y + box.height / 2 + 30,
+    //         box.x + box.width / 2, box.y + box.height / 2
+    //     );
+    // }
 
 
 
