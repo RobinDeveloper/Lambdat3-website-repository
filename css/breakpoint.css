@@ -1,0 +1,34 @@
+@media only screen and (max-width: 595px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .logo {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .introduction {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .left-nav {
+    left: 1.5rem;
+  }
+
+  .right-nav {
+    right: 1.5rem;
+  }
+}

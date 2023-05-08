@@ -143,6 +143,7 @@ button:hover {
 .right-nav {
   position: fixed;
   top: 50dvh;
+  transform: translate(0%, -50%);
 }
 
 .left-nav {
