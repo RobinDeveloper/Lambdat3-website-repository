@@ -53,6 +53,10 @@ button:hover {
   transition: 0.8s top ease;
 }
 
+.logo-hero {
+  z-index: 3;
+}
+
 .logo-hero > img {
   width: 12rem;
   height: 12rem;
@@ -62,7 +66,7 @@ button:hover {
   position: fixed;
   top: 3rem;
   left: 3rem;
-  z-index: 3;
+  z-index: 1;
 }
 
 .content {
@@ -135,5 +139,5 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 2;
 }
