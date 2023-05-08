@@ -54,6 +54,12 @@ content.forEach((object) => {
 
   add(icon, audioPlayer);
 
+  let repeat = create("button", "repeat");
+  icon = create("i", "fa-solid");
+  icon.classList.add("fa-rotate-left");
+
+  add(icon, repeat);
+
   let workDescription = create("div", "work-description");
 
   let p = create("p");
@@ -75,6 +81,7 @@ content.forEach((object) => {
   add(title, section);
 
   add(audioPlayer, container);
+  add(repeat, container);
   add(workDescription, container);
 
   add(container, section);
