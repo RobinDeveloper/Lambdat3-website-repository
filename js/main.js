@@ -11,117 +11,142 @@ const audioTrack = new Audio("../public/Trackmania/firstFinal.mp3");
 let activeHero;
 
 heroButton.addEventListener("click", () => {
-  activeHero = !activeHero;
-  if (!activeHero) {
-    hero.style.top = "0";
-  } else {
-    hero.style.top = "-100dvh";
-  }
+    activeHero = !activeHero;
+    if (!activeHero) {
+        hero.style.top = "0";
+    } else {
+        hero.style.top = "-100dvh";
+    }
 });
 
 homeButton.addEventListener("click", () => {
-  activeHero = !activeHero;
-  if (!activeHero) {
-    hero.style.top = "0";
-  } else {
-    hero.style.top = "-100dvh";
-  }
+    activeHero = !activeHero;
+    if (!activeHero) {
+        hero.style.top = "0";
+    } else {
+        hero.style.top = "-100dvh";
+    }
 });
 
 // ------------------------------------------------------------------------------
 
-import data from "../public/content.json" assert { type: "json" };
+import data from "../public/content.json" assert {type: "json"};
+
 const content = data;
 
 let sections = [];
 
 content.forEach((object) => {
-  let section = create("section", "content");
-  section.classList.add(object.title);
-  section.setAttribute("id", object.title);
-  section.style.background = "url(" + object.backgroundImage + ")";
-  section.style.backgroundRepeat = "norepeat";
-  section.style.backgroundPosition = "center";
-  section.style.backgroundSize = "cover";
+    let section = create("section", "content");
+    if (object.title !== "") {
+        section.classList.add(object.title);
+        section.setAttribute("id", object.title);
+    }
+    section.style.background = "url(" + object.backgroundImage + ")";
+    section.style.backgroundRepeat = "norepeat";
+    section.style.backgroundPosition = "center";
+    section.style.backgroundSize = "cover";
 
-  let title;
+    let title;
 
-  let container = create("div", "container");
+    let container = create("div", "container");
 
-  let audioPlayer = create("button", "audio-player");
-  let icon = create("i", "fa-solid");
-  icon.classList.add("fa-play-circle");
+    let audioPlayer = create("button", "audio-player");
+    let icon = create("i", "fa-solid");
+    icon.classList.add("fa-play-circle");
 
-  add(icon, audioPlayer);
+    add(icon, audioPlayer);
 
-  let repeat = create("button", "repeat");
-  icon = create("i", "fa-solid");
-  icon.classList.add("fa-rotate-left");
+    let repeat = create("button", "repeat");
+    icon = create("i", "fa-solid");
+    icon.classList.add("fa-rotate-left");
 
-  add(icon, repeat);
+    add(icon, repeat);
 
-  let workDescription = create("div", "work-description");
+    let workDescription = create("div", "work-description");
 
-  let p = create("p");
-  p.innerText = object.description;
+    let p = create("p");
+    p.innerText = object.description;
 
-  add(p, workDescription);
+    add(p, workDescription);
 
-  if (
-    object.titleImage === "" ||
-    object.titleImage !== "[your description here]"
-  ) {
-    title = create("h1", "title");
-    let titleText = object.title.replaceAll("-", " ");
-    title.innerText = titleText;
-  } else {
-    title = create("img", "title");
-  }
+    if (object.titleImage === "" && object.title !== "") {
+        title = create("h1", "title");
+        let titleText = object.title.replaceAll("-", " ");
+        title.innerText = titleText;
+    } else {
+        title = create("img", "title");
+        title.src = object.titleImage;
+    }
 
-  add(title, section);
+    add(title, section);
 
-  add(audioPlayer, container);
-  add(repeat, container);
-  add(workDescription, container);
+    add(audioPlayer, container);
+    add(repeat, container);
+    add(workDescription, container);
 
-  add(container, section);
+    add(container, section);
 
-  add(section, main);
+    add(section, main);
 
-  sections.push({ id: object.title });
+    sections.push({id: object.title});
 });
 
 const playButtons = document.querySelectorAll(".audio-player");
+const repeatButtons = document.querySelectorAll(".repeat");
 
 for (let j = 0; j < playButtons.length; j++) {
-  playButtons[j].id = j;
+    playButtons[j].id = j;
 }
+
+for (let j = 0; j < repeatButtons.length; j++) {
+    repeatButtons[j].id = j;
+}
+let state = [false, false, false]
+repeatButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        pause();
+        state[button.id] = !state[button.id];
+        switch (button.id) {
+            case "0":
+                audioTrack.currentTime = 0;
+                break;
+            case "1":
+                audioTracer.currentTime = 0;
+                break;
+            case "2":
+                audioMurder.currentTime = 0;
+                break;
+        }
+    });
+});
+
+
+
 playButtons.forEach((button) => {
-  let state;
+    button.addEventListener("click", () => {
+        state[button.id] = !state[button.id];
 
-  button.addEventListener("click", () => {
-    state = !state;
-
-    if (state) {
-      button.firstChild.classList.replace("fa-play-circle", "fa-pause-circle");
-      switch (button.id) {
-        case "0":
-          audioTrack.play();
-          break;
-        case "1":
-          audioTracer.play();
-          break;
-        case "2":
-          audioMurder.play();
-          break;
-        default:
-          console.log("No id for audio");
-      }
-    } else {
-      button.firstChild.classList.replace("fa-pause-circle", "fa-play-circle");
-      pause();
-    }
-  });
+        if (state[button.id]) {
+            button.firstChild.classList.replace("fa-play-circle", "fa-pause-circle");
+            switch (button.id) {
+                case "0":
+                    audioTrack.play();
+                    break;
+                case "1":
+                    audioTracer.play();
+                    break;
+                case "2":
+                    audioMurder.play();
+                    break;
+                default:
+                    console.log("No id for audio");
+            }
+        } else {
+            button.firstChild.classList.replace("fa-pause-circle", "fa-play-circle");
+            pause();
+        }
+    });
 });
 
 const leftNav = document.querySelector(".left-nav");
@@ -133,39 +158,39 @@ let transform = -100;
 main.style.right = `${transform}dvw`;
 
 leftNav.addEventListener("click", () => {
-  if (i !== 0) {
-    i -= 1;
-    transform -= 100;
-    pause();
-  }
-  main.style.right = `${transform}dvw`;
+    if (i !== 0) {
+        i -= 1;
+        transform -= 100;
+        pause();
+    }
+    main.style.right = `${transform}dvw`;
 });
 
 rightNav.addEventListener("click", () => {
-  if (i !== 2) {
-    i += 1;
-    transform += 100;
-    pause();
-  }
-  main.style.right = `${transform}dvw`;
+    if (i !== 2) {
+        i += 1;
+        transform += 100;
+        pause();
+    }
+    main.style.right = `${transform}dvw`;
 });
 
 function pause() {
-  playButtons.forEach((button) => {
-    let player = button.firstChild;
-    if (player.classList.contains("fa-pause-circle")) {
-      player.classList.replace("fa-pause-circle", "fa-play-circle");
-    }
-  });
+    playButtons.forEach((button) => {
+        let player = button.firstChild;
+        if (player.classList.contains("fa-pause-circle")) {
+            player.classList.replace("fa-pause-circle", "fa-play-circle");
+        }
+    });
 
-  audioTrack.pause();
-  audioTracer.pause();
-  audioMurder.pause();
+    audioTrack.pause();
+    audioTracer.pause();
+    audioMurder.pause();
 }
 
 // ------------------------------------------------------------------------------
 
-import introduction from "../public/introductory.json" assert { type: "json" };
+import introduction from "../public/introductory.json" assert {type: "json"};
 
 const intro = document.querySelector(".introductory-text");
 intro.innerText = introduction.text;
@@ -173,15 +198,15 @@ intro.innerText = introduction.text;
 // ------------------------------------------------------------------------------
 
 function create(el, cl) {
-  let element = document.createElement(el);
-  if (cl) element.classList.add(cl);
-  return element;
+    let element = document.createElement(el);
+    if (cl) element.classList.add(cl);
+    return element;
 }
 
 function add(child, parent) {
-  if (parent === body) {
-    parent.insertBefore(child, document.querySelector(".left-nav"));
-  } else {
-    parent.appendChild(child);
-  }
+    if (parent === body) {
+        parent.insertBefore(child, document.querySelector(".left-nav"));
+    } else {
+        parent.appendChild(child);
+    }
 }
