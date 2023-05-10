@@ -6,7 +6,7 @@ const homeButton = document.querySelector(".logo");
 
 const audioTracer = new Audio("../public/testsounds/1.mp3");
 const audioMurder = new Audio("../public/testsounds/2.mp3");
-const audioTrack = new Audio("../public/testsounds/3.mp3");
+const audioTrack = new Audio("../public/Trackmania/firstFinal.mp3");
 
 let activeHero;
 

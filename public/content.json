@@ -2,8 +2,8 @@
   {
     "title": "Trackmania-World-Cup-|-Grand-Final-Commentary",
     "description": "[your description here]",
-    "titleImage": "../assets/[name of your group's folder]/title.jpeg",
-    "backgroundImage": "#00ff00",
+    "titleImage": "../public/Trackmania/Tracklogo.png",
+    "backgroundImage": "../public/Trackmania/background.jpg",
     "sound": "../assets/[group]/sound.mp3"
   },
   {
