@@ -3,8 +3,7 @@
     "title": "",
     "description": "We welcome you to listen to our e-sports commentary of the 2022 Trackmania World Cup Finals. A research into the ways humans and AI can collaborate, through the medium of sports narration. Real-time events are used as input to generate AI scripts, which are in turn fed into a tekst-to-speech network. By doing so, we hope to close a gap between the way humans and artificial intelligences interface.",
     "titleImage": "../public/Trackmania/Tracklogo.png",
-    "backgroundImage": "../public/Trackmania/background.jpg",
-    "sound": "../assets/[group]/sound.mp3"
+    "backgroundImage": "../public/Trackmania/background.jpg"
   },
   {
     "title": "traceroute",
@@ -13,9 +12,9 @@
     "backgroundImage": "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg"
   },
   {
-    "title": "murdercase",
+    "title": "",
     "description": "[your description here]",
-    "titleImage": "",
-    "backgroundImage": "https://static.vecteezy.com/system/resources/previews/008/131/826/original/abstract-3d-light-brown-background-with-gold-lines-curved-wavy-sparkle-with-copy-space-for-text-luxury-style-template-design-free-vector.jpg"
+    "titleImage": "../public/Murder/Titel Unheard.png",
+    "backgroundImage": "../public/Murder/Background.jpg"
   }
 ]

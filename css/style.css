@@ -26,6 +26,7 @@ main {
 button {
   opacity: 0.5;
   transition: 0.3s opacity ease;
+  filter: invert();
 }
 
 button:hover {
@@ -126,8 +127,7 @@ button:hover {
 }
 
 .audio-player {
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%);}
 
 .audio-player .fa-solid {
   font-size: 8rem;
@@ -144,6 +144,7 @@ button:hover {
   transition: 0.3s opacity ease;
   mask-image: linear-gradient(0deg, transparent 0, red 8rem);
   -webkit-mask-image: linear-gradient(0deg, transparent 0, red 8rem);
+  color: white;
 }
 
 .work-description:hover {
