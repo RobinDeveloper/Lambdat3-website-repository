@@ -4,9 +4,9 @@ const main = document.querySelector("main");
 const heroButton = document.querySelector(".logo-hero");
 const homeButton = document.querySelector(".logo");
 
-const audioTracer = new Audio("../public/testsounds/1.mp3");
-const audioMurder = new Audio("../public/testsounds/2.mp3");
 const audioTrack = new Audio("../public/Trackmania/firstFinal.mp3");
+const audioTracer = new Audio("../public/traceroute/traceroute.wav");
+const audioMurder = new Audio("../public/murder/Unheard Danger.wav");
 
 let activeHero;
 
@@ -42,10 +42,14 @@ content.forEach((object) => {
     section.classList.add(object.title);
     section.setAttribute("id", object.title);
   }
-  section.style.background = "url(" + object.backgroundImage + ")";
-  section.style.backgroundRepeat = "norepeat";
-  section.style.backgroundPosition = "center";
-  section.style.backgroundSize = "cover";
+  if (object.backgroundImage.includes("#")) {
+    section.style.background = object.backgroundImage;
+  } else {
+    section.style.background = "url(" + object.backgroundImage + ")";
+    section.style.backgroundRepeat = "norepeat";
+    section.style.backgroundPosition = "center";
+    section.style.backgroundSize = "cover";
+  }
 
   let title;
 
@@ -66,7 +70,7 @@ content.forEach((object) => {
   let workDescription = create("div", "work-description");
 
   let p = create("p");
-  p.innerText = object.description;
+  p.innerHTML = object.description;
 
   add(p, workDescription);
 
@@ -74,7 +78,7 @@ content.forEach((object) => {
     title = create("h1", "title");
     let titleText = object.title.replaceAll("-", " ");
     title.innerText = titleText;
-  } else {
+  } else if (object.titleImage !== "") {
     title = create("img", "title");
     title.src = object.titleImage;
   }
@@ -155,6 +159,20 @@ let i = 1;
 let transform = -100;
 main.style.right = `${transform}dvw`;
 
+const logo = document.querySelector(".logo");
+
+document.addEventListener("click", () => {
+  if (transform === 0 || transform === -200) {
+    logo.style.filter = "invert()";
+    leftNav.style.filter = "invert()";
+    rightNav.style.filter = "invert()";
+  } else {
+    logo.style.filter = "none";
+    leftNav.style.filter = "none";
+    rightNav.style.filter = "none";
+  }
+});
+
 leftNav.addEventListener("click", () => {
   if (i !== 0) {
     i -= 1;
@@ -191,7 +209,7 @@ function pause() {
 import introduction from "../public/introductory.json" assert { type: "json" };
 
 const intro = document.querySelector(".introductory-text");
-intro.innerText = introduction.text;
+intro.innerHTML = introduction.text;
 
 // ------------------------------------------------------------------------------
 
@@ -207,4 +225,7 @@ function add(child, parent) {
   } else {
     parent.appendChild(child);
   }
+}
+
+if (main.style.transform == "100dvw") {
 }

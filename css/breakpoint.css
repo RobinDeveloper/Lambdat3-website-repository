@@ -24,11 +24,32 @@
     padding-right: 1.5rem;
   }
 
+  .work-description {
+    overflow: scroll;
+    mask-image: linear-gradient(0deg, transparent 0, red 8rem);
+    -webkit-mask-image: linear-gradient(0deg, transparent 0, red 8rem);
+    padding-bottom: 8rem;
+  }
+
   .left-nav {
     left: 1.5rem;
   }
 
   .right-nav {
     right: 1.5rem;
+  }
+
+  .content.murder {
+    justify-content: space-between;
+    background: #191919;
+  }
+
+  .content.murder .title {
+    display: inherit;
+  }
+
+  .content .title,
+  .content.traceroute .title {
+    width: 75dvw;
   }
 }

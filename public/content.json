@@ -1,20 +1,20 @@
 [
   {
-    "title": "",
+    "title": "trackmania",
     "description": "We welcome you to listen to our e-sports commentary of the 2022 Trackmania World Cup Finals. A research into the ways humans and AI can collaborate, through the medium of sports narration. Real-time events are used as input to generate AI scripts, which are in turn fed into a tekst-to-speech network. By doing so, we hope to close a gap between the way humans and artificial intelligences interface.",
     "titleImage": "../public/Trackmania/Tracklogo.png",
     "backgroundImage": "../public/Trackmania/background.jpg"
   },
   {
     "title": "traceroute",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel arcu lectus. Sed pulvinar urna velit, a tincidunt est porta sit amet. Donec at porttitor diam. Sed dignissim felis id accumsan placerat. Sed vitae sapien tellus. Morbi nec interdum urna. Maecenas porttitor eros in justo condimentum volutpat. Donec suscipit ut tellus et feugiat. In hac habitasse platea dictumst. Praesent vel elit libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ut sapien nibh. Nunc sit amet rhoncus justo. Sed nunc quam, tristique nec cursus at, convallis eget lectus. Cras a sem ipsum. Nulla facilisi. Phasellus congue ligula in lacus vestibulum, non venenatis magna ullamcorper. In consectetur vel nulla a lobortis. Etiam turpis sem, cursus eget massa ut, tristique euismod nunc. In hac habitasse platea dictumst. Duis aliquam hendrerit luctus. Nunc efficitur pretium egestas. Ut ultrices, elit nec placerat semper, tellus odio ornare purus, vitae posuere sem arcu sit amet ante. Curabitur dapibus dui diam, vitae auctor dui condimentum in. Duis sit amet efficitur quam. Phasellus in mauris lacinia purus iaculis aliquet. Suspendisse ac facilisis magna. Duis arcu tellus, venenatis in tortor non, condimentum interdum ligula. Integer ornare metus id mollis ornare. Quisque ullamcorper rhoncus.",
-    "titleImage": "",
+    "description": "traceroute is an experience where the listener can emerge in the path we take when we request to enter an address on the internet. We visit each digital location at its physical place, making a relation to the real world. The name of the project is equal to the program which lives in the terminal of our computers. This program reveals the full list of places that our computers have to visit before reaching the end destination (a website).<br><br>Artists: Isaac van den Aaker, Kaan Pişkin and Niels Nicola",
+    "titleImage": "../public/traceroute/title.png",
     "backgroundImage": "../public/traceroute/achtergrond.png"
   },
   {
-    "title": "",
-    "description": "[your description here]",
+    "title": "murder",
+    "description": "Unheard Danger is an experience that evokes a range of emotions. As you listen, you feel a sense of apprehension and unease, like something is about to happen but you don't know what. The sounds are sharp and abrasive, taking you out of your comfort zone and leaving you on edge. You are in a place where violence could erupt at any moment. But this only adds to the feeling of tension, as you struggle to make sense of the chaos around you.<br><br>Artists: Goeun LEE,  Mare de Boer and Misha van Rooij.",
     "titleImage": "../public/Murder/Titel Unheard.png",
-    "backgroundImage": "../public/Murder/Background.jpg"
+    "backgroundImage": "#191919;"
   }
 ]
