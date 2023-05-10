@@ -26,7 +26,6 @@ main {
 button {
   opacity: 0.5;
   transition: 0.3s opacity ease;
-  filter: invert();
 }
 
 button:hover {
@@ -55,6 +54,7 @@ button:hover {
 
 .logo-hero {
   z-index: 3;
+  filter: invert();
 }
 
 .logo-hero > img {
@@ -114,12 +114,26 @@ button:hover {
   margin-top: -3rem;
 }
 
+.repeat {
+  margin-top: -3rem;
+  transition: 0.6s transform ease;
+  transform: rotate(0deg);
+}
+
+.repeat:hover {
+  transform: rotate(-360deg);
+}
+
 .audio-player {
   transform: translateY(-50%);
 }
 
 .audio-player .fa-solid {
   font-size: 8rem;
+}
+
+.work-description {
+  margin-top: 3rem;
 }
 
 .work-description,
@@ -143,6 +157,7 @@ button:hover {
 .right-nav {
   position: fixed;
   top: 50dvh;
+  transform: translate(0%, -50%);
 }
 
 .left-nav {

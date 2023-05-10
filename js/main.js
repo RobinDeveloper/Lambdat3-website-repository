@@ -33,19 +33,16 @@ homeButton.addEventListener("click", () => {
 import data from "../public/content.json" assert { type: "json" };
 const content = data;
 
-const assets = [
-  {
-    //"backgroundImage": "../assets/[name of your group's folder]/background.jpg"
-  },
-];
-
 let sections = [];
 
 content.forEach((object) => {
   let section = create("section", "content");
   section.classList.add(object.title);
   section.setAttribute("id", object.title);
-  section.style.background = object.backgroundImage;
+  section.style.background = "url(" + object.backgroundImage + ")";
+  section.style.backgroundRepeat = "norepeat";
+  section.style.backgroundPosition = "center";
+  section.style.backgroundSize = "cover";
 
   let title;
 
@@ -56,6 +53,12 @@ content.forEach((object) => {
   icon.classList.add("fa-play-circle");
 
   add(icon, audioPlayer);
+
+  let repeat = create("button", "repeat");
+  icon = create("i", "fa-solid");
+  icon.classList.add("fa-rotate-left");
+
+  add(icon, repeat);
 
   let workDescription = create("div", "work-description");
 
@@ -78,6 +81,7 @@ content.forEach((object) => {
   add(title, section);
 
   add(audioPlayer, container);
+  add(repeat, container);
   add(workDescription, container);
 
   add(container, section);
@@ -87,41 +91,41 @@ content.forEach((object) => {
   sections.push({ id: object.title });
 });
 
-const playButtons = document.querySelectorAll('.audio-player');
+const playButtons = document.querySelectorAll(".audio-player");
 
 for (let j = 0; j < playButtons.length; j++) {
-    playButtons[j].id = j;
+  playButtons[j].id = j;
 }
-playButtons.forEach(button => {
-    let state;
+playButtons.forEach((button) => {
+  let state;
 
-    button.addEventListener('click', () => {
-        state = !state;
+  button.addEventListener("click", () => {
+    state = !state;
 
-        if (state) {
-            button.firstChild.classList.replace('fa-play-circle', 'fa-pause-circle');
-            switch (button.id) {
-                case "0":
-                    audioTrack.play();
-                    break;
-                case "1":
-                    audioTracer.play();
-                    break;
-                case "2":
-                    audioMurder.play();
-                    break
-                default:
-                    console.log("No id for audio");
-            }
-        } else {
-            button.firstChild.classList.replace('fa-pause-circle', 'fa-play-circle');
-            pause();
-        }
-    });
+    if (state) {
+      button.firstChild.classList.replace("fa-play-circle", "fa-pause-circle");
+      switch (button.id) {
+        case "0":
+          audioTrack.play();
+          break;
+        case "1":
+          audioTracer.play();
+          break;
+        case "2":
+          audioMurder.play();
+          break;
+        default:
+          console.log("No id for audio");
+      }
+    } else {
+      button.firstChild.classList.replace("fa-pause-circle", "fa-play-circle");
+      pause();
+    }
+  });
 });
 
-const leftNav = document.querySelector('.left-nav');
-const rightNav = document.querySelector('.right-nav');
+const leftNav = document.querySelector(".left-nav");
+const rightNav = document.querySelector(".right-nav");
 
 let i = 1;
 
@@ -147,16 +151,16 @@ rightNav.addEventListener("click", () => {
 });
 
 function pause() {
-    playButtons.forEach(button => {
-        let player = button.firstChild;
-        if (player.classList.contains('fa-pause-circle')) {
-            player.classList.replace('fa-pause-circle', 'fa-play-circle');
-        }
-    });
+  playButtons.forEach((button) => {
+    let player = button.firstChild;
+    if (player.classList.contains("fa-pause-circle")) {
+      player.classList.replace("fa-pause-circle", "fa-play-circle");
+    }
+  });
 
-    audioTrack.pause();
-    audioTracer.pause();
-    audioMurder.pause();
+  audioTrack.pause();
+  audioTracer.pause();
+  audioMurder.pause();
 }
 
 // ------------------------------------------------------------------------------
