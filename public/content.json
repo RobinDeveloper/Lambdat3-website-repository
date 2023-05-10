@@ -9,7 +9,7 @@
     "title": "traceroute",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel arcu lectus. Sed pulvinar urna velit, a tincidunt est porta sit amet. Donec at porttitor diam. Sed dignissim felis id accumsan placerat. Sed vitae sapien tellus. Morbi nec interdum urna. Maecenas porttitor eros in justo condimentum volutpat. Donec suscipit ut tellus et feugiat. In hac habitasse platea dictumst. Praesent vel elit libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ut sapien nibh. Nunc sit amet rhoncus justo. Sed nunc quam, tristique nec cursus at, convallis eget lectus. Cras a sem ipsum. Nulla facilisi. Phasellus congue ligula in lacus vestibulum, non venenatis magna ullamcorper. In consectetur vel nulla a lobortis. Etiam turpis sem, cursus eget massa ut, tristique euismod nunc. In hac habitasse platea dictumst. Duis aliquam hendrerit luctus. Nunc efficitur pretium egestas. Ut ultrices, elit nec placerat semper, tellus odio ornare purus, vitae posuere sem arcu sit amet ante. Curabitur dapibus dui diam, vitae auctor dui condimentum in. Duis sit amet efficitur quam. Phasellus in mauris lacinia purus iaculis aliquet. Suspendisse ac facilisis magna. Duis arcu tellus, venenatis in tortor non, condimentum interdum ligula. Integer ornare metus id mollis ornare. Quisque ullamcorper rhoncus.",
     "titleImage": "",
-    "backgroundImage": "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg"
+    "backgroundImage": "../public/traceroute/achtergrond.png"
   },
   {
     "title": "",
