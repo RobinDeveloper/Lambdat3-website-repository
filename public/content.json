@@ -1,7 +1,7 @@
 [
   {
     "title": "trackmania",
-    "description": "We welcome you to listen to our e-sports commentary of the 2022 Trackmania World Cup Finals. A research into the ways humans and AI can collaborate, through the medium of sports narration. Real-time events are used as input to generate AI scripts, which are in turn fed into a tekst-to-speech network. By doing so, we hope to close a gap between the way humans and artificial intelligences interface.",
+    "description": "AUTHORS: NIELS GRÄBER AND ROBIN OPHEIJ<br>We welcome you to listen to our e-sports commentary of the 2022 Trackmania World Cup Finals. A research into the ways humans and AI can collaborate, through the medium of sports narration. Real-time events are used as input to generate AI scripts, which are in then fed into a text-to-speech network. We hope to close a gap between the way humans and artificial intelligences communicate.",
     "titleImage": "../public/Trackmania/Tracklogo.png",
     "backgroundImage": "../public/Trackmania/background.jpg"
   },
